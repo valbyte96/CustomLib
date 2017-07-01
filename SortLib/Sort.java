@@ -21,7 +21,7 @@ public class Sort {
     //TEMP MAIN JUST FOR TESTING
     public static void main(String[] args){
 	double[] test1 = {1.1, 4, 0, 2};
-	double[] sList = select(test1);
+	double[] sList = insert(test1);
 	System.out.println(Arrays.toString(sList));
 	
 
@@ -40,16 +40,25 @@ public class Sort {
     }
     
       
-    /**ALGORITHM DESCRIPTION:
+    /**ALGORITHM DESCRIPTION: start at second index. compair i to i-1
        AVERAGE RUNTIME: O(n^2)
        BEST CASE RUNTIME: O(n)
        WORST CASE RUNTIME: O(n^2)
      */
     public static double[] insert(double[] uList){
 	int len = uList.length; //length 
-        
+        for (int i = 1; i<len ; i++){  //start at second idx
+	    int j = i; 
+	    while(j>0 && uList[j-1]>uList[j]){ //end at when to start or conds. sat. 
+		double temp = uList[j-1]; //swap
+		uList[j-1] = uList[j];
+		uList[j] = temp;
+		j = j - 1; //decrease
+
+	    }
+	}
 	
-	return 0.0;
+	return uList;
 
     }
     
