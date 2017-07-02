@@ -21,7 +21,7 @@ public class Sort {
     //TEMP MAIN JUST FOR TESTING
     public static void main(String[] args){
 	double[] test1 = {1.1, 4, 0, 2};
-	double[] sList = insert(test1);
+	double[] sList = bubble(test1);
 	System.out.println(Arrays.toString(sList));
 	
 
@@ -101,20 +101,15 @@ public class Sort {
      */
     public static double[] bubble(double[] uList){
 	int len = uList.length; //length
-	int stop = len;
 	for (int i=0; i<len; i++){
-	    for (int j=0; j<stop; j++){
-
-
+	    for (int j=1; j<len-i; j++){
+		if (uList[j-1]>uList[j]){
+		    double temp = uList[j-1];
+		    uList[j-1]=uList[j];
+		    uList[j]=temp;
+		 }		
 	    }
-	    stop = stop - 1;
-	}
-
+       }
 	return uList; //return sorted list
     }
-
-
-
-
-
 }
