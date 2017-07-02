@@ -21,7 +21,7 @@ public class Sort {
     //TEMP MAIN JUST FOR TESTING
     public static void main(String[] args){
 	double[] test1 = {1.1, 4, 0, 2};
-	double[] sList = insert(test1);
+	double[] sList = bubble(test1);
 	System.out.println(Arrays.toString(sList));
 	
 
@@ -85,7 +85,7 @@ public class Sort {
 		
 	    }
 	}
-	return uList;
+	return uList; //return sorted list
 
     }
     /**
@@ -94,15 +94,22 @@ public class Sort {
 
 
     }
-    /**
+    /**Algorithm Description:
+       Average Runtime: O(n^2)
+       Best Case Runtime: O(n)
+       Worst Case Runtime: O(n^2)
      */
-    public static void bubble(){
-
-
+    public static double[] bubble(double[] uList){
+	int len = uList.length; //length
+	for (int i=0; i<len; i++){
+	    for (int j=1; j<len-i; j++){
+		if (uList[j-1]>uList[j]){
+		    double temp = uList[j-1];
+		    uList[j-1]=uList[j];
+		    uList[j]=temp;
+		 }		
+	    }
+       }
+	return uList; //return sorted list
     }
-
-
-
-
-
 }

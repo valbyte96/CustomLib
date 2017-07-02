@@ -47,13 +47,13 @@ public class Sort {
      */
     public static double[] insert(double[] uList){
 	int len = uList.length; //length 
-        for (int i = 1; i<len ; i++){
-	    int j = i;
-	    while(j>0 && uList[j-1]>uList[j]){
-		double temp = uList[j-1];
+        for (int i = 1; i<len ; i++){  //start at second idx
+	    int j = i; 
+	    while(j>0 && uList[j-1]>uList[j]){ //end at when to start or conds. sat. 
+		double temp = uList[j-1]; //swap
 		uList[j-1] = uList[j];
 		uList[j] = temp;
-		j = j - 1;
+		j = j - 1; //decrease
 
 	    }
 	}
@@ -85,7 +85,7 @@ public class Sort {
 		
 	    }
 	}
-	return uList;
+	return uList; //return sorted list
 
     }
     /**
@@ -94,11 +94,23 @@ public class Sort {
 
 
     }
-    /**
+    /**Algorithm Description:
+       Average Runtime: O(n^2)
+       Best Case Runtime: O(n)
+       Worst Case Runtime: O(n^2)
      */
-    public static void bubble(){
+    public static double[] bubble(double[] uList){
+	int len = uList.length; //length
+	int stop = len;
+	for (int i=0; i<len; i++){
+	    for (int j=0; j<stop; j++){
 
 
+	    }
+	    stop = stop - 1;
+	}
+
+	return uList; //return sorted list
     }
 
 
