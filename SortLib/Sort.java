@@ -12,7 +12,7 @@
 ---------------------------------------------------------------------------
 *INPUT TYPE: doubles   * 
 *EXAMPLE CALL:         *
-* Sort.bubble(unsorted)*
+* Sort.func(unsorted)  *
 ************************
 */
 
@@ -22,7 +22,7 @@ public class Sort {
     //TEMP MAIN JUST FOR TESTING
     public static void main(String[] args){
 	double[] test1 = {1.1, 4, 0, 2};
-	double[] sList = bubble(test1);
+	double[] sList = merge(test1);
 	System.out.println(Arrays.toString(sList));
 	
 
@@ -89,16 +89,20 @@ public class Sort {
 	return uList; //return sorted list
 
     }
-    /**
+    /**ALGORITHM DESCRIPTION:
+       AVERAGE RUNTIME: nlog(n)
+       BEST CASE RUNTIME: nlog(n)
+       WORST CASE RUNTIME: nlog(n)
      */
-    public static void merge(){
+    public static double[] merge(double[] uList){
+	
 
-
+	return double[] uList;
     }
-    /**Algorithm Description:
-       Average Runtime: O(n^2)
-       Best Case Runtime: O(n)
-       Worst Case Runtime: O(n^2)
+    /**ALGORITHM DESCRIPTION:
+       AVERAGE RUNTIME: O(n^2)
+       BEST CASE RUNTIME: O(n)
+       WORST CASE RUNTIME: O(n^2)
      */
     public static double[] bubble(double[] uList){
 	int len = uList.length; //length
