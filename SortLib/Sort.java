@@ -31,13 +31,13 @@ public class Sort {
     
     /**QUICK SORT
        ALGORITHM DESCRIPTION 
-       AVERAGE RUNTIME: 
-       BEST CASE RUNTIME: 
-       WORST CASE RUNTIME:
+       AVERAGE RUNTIME: O(nlog(n))
+       BEST CASE RUNTIME: O(nlog(n))
+       WORST CASE RUNTIME: O(n^2)
      */
-    public static void quick(){
-
-
+    public static void quick(double[] uList){
+    	
+    	return uList;
     }
     
       
@@ -90,9 +90,9 @@ public class Sort {
 
     }
     /**ALGORITHM DESCRIPTION:
-       AVERAGE RUNTIME: nlog(n)
-       BEST CASE RUNTIME: nlog(n)
-       WORST CASE RUNTIME: nlog(n)
+       AVERAGE RUNTIME: O(nlog(n))
+       BEST CASE RUNTIME: O(nlog(n))
+       WORST CASE RUNTIME: O(nlog(n))
      */
     public static double[] merge(double[] uList){
 	
