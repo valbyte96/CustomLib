@@ -17,10 +17,8 @@ public class Tree<E>{
 	}
 
 	/*METHODS*/
-	public void addChild(E data){
-		Tree<E> child = new Tree<E>(data);
+	public void addChild(Tree<E> child){
 		this.children.add(child);
-
 	}
 
 	/*Accessor methods*/
@@ -32,4 +30,31 @@ public class Tree<E>{
 	public void setData(E data){
 		this.data = data;
 	}
+
+	public void print(){
+		printIndented(this, 0);
+	}
+
+    /** 
+     *  Indents by the specified number of spaces 
+     *  @param n  Number of spaces
+     */
+    private static void indent(int n) {
+	for (int i = 0; i < n; i++) {
+	    System.out.print(' ');
+	}
+    }
+
+    public void printIndented(Tree<E> tree, int depth) {
+    	indent(depth);
+    	System.out.println(tree.data);
+    	depth+=1;
+
+    	if (tree.children.size()>0){
+    		for (int i=0; i<tree.children.size(); i++){
+    			printIndented(tree.children.get(i), depth);
+
+    		}
+    	} 
+    }
 }

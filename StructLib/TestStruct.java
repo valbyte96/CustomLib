@@ -1,3 +1,6 @@
+/*TestStruct.java
+@author: Val McCulloch
+@version: 8/18/17 */
 
 public class TestStruct {
 
@@ -8,11 +11,30 @@ public class TestStruct {
 	//testBinaryTree();
         }
     
+    /*Test method for Tree.java*/
     public static void testTree(){
-	Tree<String> test = new Tree<String>("test");
-	test.addChild("child");
+	Tree<String> root = new Tree<String>("R");
+	Tree<String> a = new Tree<String>("A");
+	Tree<String> b = new Tree<String>("B");
+	Tree<String> c = new Tree<String>("C");
+	Tree<String> d = new Tree<String>("D");
+	Tree<String> e = new Tree<String>("E");
+	Tree<String> f = new Tree<String>("F");
+	Tree<String> g = new Tree<String>("G");
+
+	root.addChild(a);
+	root.addChild(b);
+	a.addChild(c);
+	a.addChild(d);
+	b.addChild(e);
+	b.addChild(f);
+	b.addChild(g);
+
+	root.print();
+
     }
 
+    /*Test method for testBinaryTree.java*/
     public static void testBinaryTree(){
 	//create a binary tree
 	BinaryTree<Double> myTree = new BinaryTree<Double>(4.0);
