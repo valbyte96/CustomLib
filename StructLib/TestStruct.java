@@ -4,9 +4,14 @@ public class TestStruct {
 
     public static void main(String[] args){
 	// Test Binary Tree Class
-	testBinaryTree();
+	testTree();
+	//testBinaryTree();
         }
-
+    
+    public static void testTree(){
+	Tree<String> test = new Tree<String>("test");
+	test.addChild("child");
+    }
 
     public static void testBinaryTree(){
 	//create a binary tree
