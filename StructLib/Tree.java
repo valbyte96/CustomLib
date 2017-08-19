@@ -17,6 +17,11 @@ public class Tree<E>{
 	}
 
 	/*METHODS*/
+	/**
+	 * Add child to current node;
+	 * adds to ArrayList "children"
+	 * @param child, node/tree
+	 */
 	public void addChild(Tree<E> child){
 		this.children.add(child);
 	}
@@ -27,10 +32,16 @@ public class Tree<E>{
 	}
 
 	/*Setter methods*/
+
+	/**
+	 * Sets data of a specific node
+	 * @param data
+	 */
 	public void setData(E data){
 		this.data = data;
 	}
 
+	/**Calls printIndented */
 	public void print(){
 		printIndented(this, 0);
 	}
@@ -44,6 +55,13 @@ public class Tree<E>{
 	    System.out.print(' ');
 	}
     }
+    /** 
+     *  Prints the tree with indentation corresponding to level.
+     *  Basically a fancy version of preorder.
+     *
+     *  @param tree   current node to recurse on
+     *  @param depth  Level of this node, for indentation 
+     */
 
     public void printIndented(Tree<E> tree, int depth) {
     	indent(depth);
