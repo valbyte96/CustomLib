@@ -1,8 +1,9 @@
 /** Tree.java
   * @author: Val McCulloch
-  * @version: 9/17/2017
-  * 
+  * @version: 8/19/2017
+  * Implementation of a trie
   */
+
 import java.util.ArrayList;
 
 

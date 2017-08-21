@@ -1,14 +1,14 @@
 /*TestStruct.java
 @author: Val McCulloch
-@version: 8/18/17 */
+@version: 8/19/17 */
 
 public class TestStruct {
 
 
     public static void main(String[] args){
-	// Test Binary Tree Class
-	testTree();
-	//testBinaryTree();
+	
+	testTree(); //test tree (trie) class
+	//testBinaryTree(); //test binary tree class
         }
     
     /*Test method for Tree.java*/
