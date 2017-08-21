@@ -16,7 +16,6 @@ public class Traversal{
     		System.out.println(tree.getData());
     		preOrder(tree.getLeft());
     		preOrder(tree.getRight());
-
     	}
     }
 
@@ -25,7 +24,6 @@ public class Traversal{
     		inOrder(tree.getLeft());
     		System.out.println(tree.getData());
     		inOrder(tree.getRight());
-
     	}
     }
 
@@ -34,7 +32,6 @@ public class Traversal{
     		postOrder(tree.getLeft());
     		postOrder(tree.getRight());
     		System.out.println(tree.getData());
-
     	}
     }
 
@@ -50,19 +47,21 @@ public class Traversal{
     		for (int i=0; i<children.size(); i++){
     			preOrder(children.get(i));
     		}
-
     	}
     }
 
-    //@TODO
+    //@TODO: Not quite right
     public static void inOrder(Tree tree){
     	if (tree != null){
     		ArrayList<Tree> children = tree.getChildren();
     		for (int i=0; i<children.size(); i++){
     			inOrder(children.get(i));
-    			//System.out.println(tree.getData());
-    		}    		
+    			//System.out.println(children.get(i).getData());
+    			System.out.println(tree.getData());
+    		}
+    		System.out.println(tree.getData());    		
     	}
+
     }
 
     public static void postOrder(Tree tree){
