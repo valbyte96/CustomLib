@@ -19,7 +19,7 @@ public class Test{
     	System.out.println("PreOrder:");
     	Traversal.preOrder(tTree); //preOrder traversal
     	System.out.println("InOrder:");
-    	//Traversal.inOrder(tTree); //inOrder traversal
+    	Traversal.inOrder(tTree); //inOrder traversal
     	System.out.println("PostOrder:");
     	Traversal.postOrder(tTree); //postOrder traversal
 
