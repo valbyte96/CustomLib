@@ -4,6 +4,8 @@
  *
  */
 import java.util.ArrayList;
+import java.util.Queue; // for BFS
+import java.util.LinkedList;
 
 public class Graph<E> {
 	//fields
@@ -53,22 +55,44 @@ public class Graph<E> {
 
 
 	/** SEARCHING FUNCTIONS **/
+	/**implementation of depth first search
+	 * @params node, starting node
+	 */
 	public void depth(Node node) {
-		if (node != null) {
-			System.out.println(node.getData());
-			node.visit();
-			ArrayList<Node> neighbors = node.getNeighbors();
-			for (int i = 0; i < neighbors.size(); i++) {
+		if (node != null) { 
+			System.out.println(node.getData()); //"visit"
+			node.visit(); //record visited
+			ArrayList<Node> neighbors = node.getNeighbors(); 
+			for (int i = 0; i < neighbors.size(); i++) { //for each neighbor
 				Node neighbor = neighbors.get(i);
-				if (neighbor.visited() == false) {
+				if (!neighbor.visited()) { //recurse if neighbor not visited
 					depth(neighbor);
 				}
 			}
 		}
 	}
-
+	/**implementation of breadth first search
+	 * @params node, starting node
+	 */
 	public void breadth(Node node) {
-		//TODO
+		Queue<Node> queue = new LinkedList<Node>();
+		node.visit();
+		queue.add(node); //add starting node
+
+		while(!queue.isEmpty()){ //while there are items in queue
+			Node n = queue.remove(); //remove from start
+			ArrayList<Node> neighbors = n.getNeighbors();
+			System.out.println(n.getData());
+			for(int i = 0; i<neighbors.size(); i++){
+				Node neighbor = neighbors.get(i);
+				if (!neighbor.visited()){
+					neighbor.visit();
+					queue.add(neighbor);
+				}
+			}
+
+		}
+
 	}
 
 	public void bidirectional(Node node) {

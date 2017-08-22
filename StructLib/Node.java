@@ -42,7 +42,7 @@ public class Node<E> {
 	 *	@param node, node self is connecting to
 	 */
 	public void dirAdd(Node node) {
-		if (this.neighbors.contains(node) == false) {
+		if (!this.neighbors.contains(node)) {
 			this.neighbors.add(node);
 		}
 		node.add(this); //add self to neighbor
@@ -51,7 +51,7 @@ public class Node<E> {
 	 *	@param node, node self is connecting to
 	 */
 	public void add(Node node) {
-		if (this.neighbors.contains(node) == false) {
+		if (!this.neighbors.contains(node)) {
 			this.neighbors.add(node);
 		}
 	}

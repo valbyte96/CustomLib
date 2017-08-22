@@ -7,6 +7,7 @@ public class TestGraphSearches{
 
 	public static void main(String[] args){
 		uGraph1();
+		//dGraph1();
 
 	}
 
@@ -38,8 +39,30 @@ public class TestGraphSearches{
 		n6.dirAdd(n2);
 
 		// begin tests
-		graph.depth(n1);
+		//graph.depth(n1);
+		graph.breadth(n1);
 
 	}
+
+	//builds and tests a directed graph
+	public static void dGraph1() {
+		//build graph
+		Graph<String> graph = new Graph<String>();
+		Node<String> n1 = new Node<String>("A");
+		Node<String> n2 = new Node<String>("B");
+		Node<String> n3 = new Node<String>("C");
+
+		graph.add(n1);
+		graph.add(n2);
+		graph.add(n3);
+
+		n2.add(n1);
+		n3.add(n1);
+
+		//graph.depth(n1);
+		//graph.depth(n2);
+	}
+
+
 
 }
