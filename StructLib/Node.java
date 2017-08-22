@@ -6,11 +6,11 @@
 
 import java.util.ArrayList;
 
-public class Node<E>{
+public class Node<E> {
 	public E data;
 	public ArrayList<Node<E>> children;
 
-	public Node(E data){
+	public Node(E data) {
 		this.data = data;
 		this.children = new ArrayList<Node<E>>();
 
