@@ -42,8 +42,8 @@ public class Graph<E> {
 		}
 	}
 
-	/**
-	 * Print current nodes in graph
+	/** Testing function
+	 * Print current nodes' in graph memory location
 	 */
 	public void printNodes() {
 		for (int i = 0; i < this.nList.size(); i++) {
@@ -51,10 +51,7 @@ public class Graph<E> {
 		}
 	}
 
+
 	/** */
-
-
-
-
 
 }
