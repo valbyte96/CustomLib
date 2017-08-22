@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class Node<E> {
 	public E data;
-	public ArrayList<Node<E>> children;
+	public ArrayList<Node<E>> neighbors;
 
 	public Node(E data) {
 		this.data = data;
-		this.children = new ArrayList<Node<E>>();
+		this.neighbors = new ArrayList<Node<E>>();
 
 	}
 
