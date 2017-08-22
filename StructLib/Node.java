@@ -8,13 +8,15 @@ import java.util.ArrayList;
 
 public class Node<E> {
 	//fields
-	public E data;
-	public ArrayList<Node<E>> neighbors;
+	private E data;
+	private ArrayList<Node<E>> neighbors;
+	private boolean visited; //for traversals
 
 	//constructor 1
 	public Node(E data) {
 		this.data = data;
 		this.neighbors = new ArrayList<Node<E>>();
+		this.visited = false; //init false
 
 	}
 	// constructor 2
@@ -54,6 +56,27 @@ public class Node<E> {
 		}
 	}
 
+	//functions for traversing
+	public void visit() {
+		this.visited = true;
+	}
+
+	public boolean visited() {
+		return this.visited;
+	}
+
+	public E getData() {
+		return this.data;
+	}
+
+	public ArrayList<Node<E>> getNeighbors() {
+		return this.neighbors;
+	}
+
+	public int getNumNeighbors() {
+		return this.neighbors.size();
+	}
+
 	/**Testing function; print out neighbors'
 	 * memory location
 	 */
@@ -62,5 +85,4 @@ public class Node<E> {
 			System.out.println(this.neighbors.get(i));
 		}
 	}
-
 }

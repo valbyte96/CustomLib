@@ -29,7 +29,7 @@ public class Graph<E> {
 	 *  @param: node, node removed from graph
 	 */
 	public void remove(Node node) {
-		if (this.nList.contains(node)){
+		if (this.nList.contains(node)) {
 			this.nList.remove(node);
 		}
 	}
@@ -52,6 +52,27 @@ public class Graph<E> {
 	}
 
 
-	/** */
+	/** SEARCHING FUNCTIONS **/
+	public void depth(Node node) {
+		if (node != null) {
+			System.out.println(node.getData());
+			node.visit();
+			ArrayList<Node> neighbors = node.getNeighbors();
+			for (int i = 0; i < neighbors.size(); i++) {
+				Node neighbor = neighbors.get(i);
+				if (neighbor.visited() == false) {
+					depth(neighbor);
+				}
+			}
+		}
+	}
+
+	public void breadth(Node node) {
+		//TODO
+	}
+
+	public void bidirectional(Node node) {
+		//TODO
+	}
 
 }

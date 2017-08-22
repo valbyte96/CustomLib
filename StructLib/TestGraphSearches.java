@@ -6,13 +6,14 @@
 public class TestGraphSearches{
 
 	public static void main(String[] args){
-		Graph<String> g1 = uGraph1();
+		uGraph1();
 
 	}
 
 	/** BUILD GRAPHS FOR TESTING **/
-	// builds an undirected graph on 6 nodes
-	public static Graph<String> uGraph1(){
+	// builds and tests an undirected graph on 6 nodes
+	public static void uGraph1(){
+		//build graph
 		Graph<String> graph = new Graph<String>();
 		Node<String> n1 = new Node<String>("A");
 		Node<String> n2 = new Node<String>("B");
@@ -28,6 +29,7 @@ public class TestGraphSearches{
 		graph.add(n5);
 		graph.add(n6);
 
+		n1.dirAdd(n2);
 		n1.dirAdd(n3);
 		n3.dirAdd(n2);
 		n3.dirAdd(n4);
@@ -35,7 +37,9 @@ public class TestGraphSearches{
 		n5.dirAdd(n6);
 		n6.dirAdd(n2);
 
-		return graph;
+		// begin tests
+		graph.depth(n1);
+
 	}
 
 }
