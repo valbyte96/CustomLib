@@ -94,8 +94,11 @@ public class Graph<E> {
 		}
 
 	}
-
-	public void bidirectional(Node node) {
+	/**implementation of dijkstra's algorithm
+	 * @params start, starting node
+	 * @params finish, destination node 
+	 */
+	public void dijkstra(Node start, Node finish) {
 		//TODO
 	}
 
